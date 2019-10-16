@@ -1,0 +1,159 @@
+
+
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet"> 
+<script src="./script/jquery-3.4.1.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<script> 
+
+$(document).ready(function() {
+var left = document.querySelector('.left');
+var right = document.querySelector('.right');
+var container = document.querySelector('.container');
+
+left.addEventListener('mouseenter', () => {
+    container.classList.add('slider_left')
+});
+
+left.addEventListener('mouseleave', () => {
+    container.classList.remove('slider_left')
+});
+
+right.addEventListener('mouseenter', () => {
+    container.classList.add('slider_right')
+});
+
+right.addEventListener('mouseleave', () => {
+    container.classList.remove('slider_right')
+});
+});  
+</script>
+
+<style>
+
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  margin: 0;
+  padding-top: 30vh;
+  font-size: 4.5rem;
+  letter-spacing: 10px;
+  font-family: 'Amatic SC', cursive;
+  text-shadow: 1px 1px #FFF;
+}
+
+p{
+  padding: 5px 50px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+ 
+  
+}
+  
+.slider{
+  position: absolute;
+  width: 50%;
+  height: 100vh;
+  text-align: center;
+  
+}
+
+.left{
+  background: url('https://images.pexels.com/photos/6444/pencil-typography-black-design.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center;
+  background-size: cover;
+ left: 0;
+  
+}
+
+.left p{
+  background: rgba(0,0,0,.7);
+  color: #FFF;
+  padding: 30px;
+}
+
+.right p{
+  background: rgba(255, 255, 255, .7);
+  color: #000;
+  padding: 30px;
+}
+
+.right{
+  background: url('https://images.pexels.com/photos/196659/pexels-photo-196659.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260') no-repeat center;
+  background-size: cover;
+ right: 0;
+  
+}
+.slider.left,
+.slider.right{
+  transition: 2s all ease-in-out;
+}
+.slider_left .left{
+  width: 100%;
+}
+
+.slider_left .right{
+  width: 0;
+}
+
+.slider_right .left{
+  width: 0;
+  
+}
+.slider_left p{
+  transition: 2s all ease-in-out;
+  font-size: 2rem;
+   background: rgba(255, 255, 255, .7);
+  color: #000;
+  padding: 30px;
+}
+
+
+
+.slider_right p{
+  transition: 3s all ease-in-out;
+  font-size: 2rem;
+   background: rgba(0,0,0,.7);
+  color: #FFF;
+  padding: 30px;
+}
+.slider_right .right{
+  width: 100%;
+  
+}
+
+
+</style>
+
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<body>
+  <div class="container">
+    <div class="slider left">
+      <h1> Web Designer</h1>
+      <p>A web designer is someone who is both creative and technically inclined, and uses both these attributes to build or 
+        redesign websites. The web designer has the ability to understand what is needed to make a website functional and 
+        easy to use, but at the same time make it aesthetically appealing to the user.</p>
+    </div>
+    <div class="slider right">
+      <h1>Web Developer</h1>
+      <p>A web developer builds and maintains websites with the client and consumer in mind. They are also very familiar
+         with many software programs, web applications and web programming languages, such as hypertext markup language 
+         (HTML), JavaScript (JS), Ruby on Rails, and C++.</p>
+    </div>
+  </div>
+</body>
+</html>
